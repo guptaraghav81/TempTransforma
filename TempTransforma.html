@@ -48,56 +48,63 @@
             transition-duration: 9s;
         }
 
-        #item2, #item3 {
-            z-index: 3;
-            position: absolute;
-            left: 50%; /* Center horizontally */
-            transform: translateX(-50%); /* Center horizontally */
-        }
-
-        #item2 {
-              top: 16vh;
-            }
-
-        #item3 {
-              top: 30vh;
-            }
-
-        #item4 {
-              z-index: 3;
-              text-align: center;
-              margin-top: 20px; /* Add margin for better spacing */
-            }
-
-        /* Additional styles for responsiveness */
-        @media screen and (max-width: 768px) {
-              #item2,
-              #item3 {
-                left: 50%;
-                transform: translateX(-50%); /**transform: translateX(-50%); is a common technique for horizontally centering absolutely positioned elements.**/
-              }
-            }
-        @media screen and (max-width:360px){
-
-        #item1{
-        display: none;
-        
-    }
-        #item1:hover{
-        transition: scale(2,3);
-    }
-        #item2,#item3{
-        text-align: center;
-        width: 100px;
-        color: blue;
-    }
-   
+        #item2,#item3 {
+    z-index: 3;
+    position: absolute;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    text-align: center; /* Center text horizontally */
+    width: 100%; /* Make the width 100% to ensure it takes the full width of the parent container */
 }
-    @media screen and (max-width:300px){
-    #h1{
+
+#item2 {
+    top: 16vh;
+}
+
+#item3 {
+    top: calc(16vh + 90px); /* Adjust top position based on height of #item2 and add some spacing (100px in this case) */
+}
+
+/* Additional styles for responsiveness */
+@media screen and (max-width: 768px) {
+    #item2,
+    #item3 {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #item1 {
+        display: none;
+    }
+    #cel,#fah{
+        width: 100px;
+        text-align: center;
+    }
+}
+@media screen and (max-width:230px){
+    #item4{
+        display: none;
+    }
+   #item1,#item2{
+    left: 10px;
+   }
+}
+    #item2,
+    #item3 {
+        width: 14%; /* Make the width 100% to ensure it takes the full width of the parent container */
+        color: blue;
+        margin-top: 20px; /* Add some margin between the inputs */
+    }
+
+
+@media screen and (max-width: 300px) {
+    #h1 {
         font-size: 30px;
     }
-   }   
+}
+
        
 
     </style>
@@ -147,5 +154,4 @@
     </script>
 </body>
 </html>
-
 
