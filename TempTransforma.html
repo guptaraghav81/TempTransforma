@@ -1,136 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TempTransforma</title>
+    <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400;500;600;700&family=Ephesis&family=Hedvig+Letters+Sans&family=Kenia&family=Noto+Sans+SC:wght@500&family=Noto+Sans+TC&family=Noto+Serif+Devanagari:wght@100;200;300;400;500;600&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Smooch+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        #h1 {
-            padding-top: 5px;
-            font-family: 'Hedvig Letters Sans', sans-serif;
-            color: #c82828;
-            text-align: center;
-            font-size: 40px;
-            cursor: pointer;
-        }
-
-        body {
-            background-image: url(okm2.jpg);
-            margin: 0; 
-            text-align: center;
-            overflow:hidden;
-        }
-
-        #flex {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative; /* Position relative for absolute positioning of inputs */
-            flex-wrap: wrap;
-            flex-direction: row;
-            margin: 15px;
-}
-
-        #item1 {
-            max-width: 100%;
-            height: auto;
-            position: relative; /* Ensure relative positioning for absolute children */
-            z-index: 1;
-}
-
-        #item1:hover {
-            transform: skew(35deg);
-            transition-duration: 9s;
-        }
-
-        #item2,#item3 {
-    z-index: 3;
-    position: absolute;
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center horizontally */
-    text-align: center; /* Center text horizontally */
-    width: 100%; /* Make the width 100% to ensure it takes the full width of the parent container */
-}
-
-#item2 {
-    top: 11vh;
-}
-
-#item3 {
-    top: calc(11vh + 90px); /* Adjust top position based on height of #item2 and add some spacing (100px in this case) */
-}
-
-/* Additional styles for responsiveness */
-@media screen and (max-width: 768px) {
-    #item2,
-    #item3 {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-}
-
-@media screen and (max-width: 360px) {
-    #item1 {
-        display: none;
-    }
-    #cel,#fah{
-        width: 100px;
-        text-align: center;
-    }
-}
-@media screen and (max-width:252px){
-    #item4{
-        display: none;
-    }
-   #item1,#item2{
-    left: 10px;
-   }
-}
-    #item2,
-    #item3 {
-        width: 14%; /* Make the width 100% to ensure it takes the full width of the parent container */
-        color: blue;
-        margin-top: 20px; /* Add some margin between the inputs */
-    }
-
-
-@media screen and (max-width: 300px) {
-    #h1 {
-        font-size: 30px;
-    }
-}
-
-       
-
-    </style>
-</head>
-<body>
-    <h1 id="h1">
-        <span class="material-symbols-outlined">device_thermostat</span>TempTransforma
-    </h1>
-    <div id="flex">
-        <img src="blob vector.png" alt="" id="item1">
-        <div id="item2">
-            <label for="name1">Celcius</label><br>
-            <input class="form-control" type="number" id="cel" value="0">
+    <link rel="stylesheet" href="stuff.css">
+  </head>
+  <body>
+    <div class="container">
+        <!-- heading-section -->
+        <div class="row text-center">
+            <div class="col-12">
+                <h1 style=" color: #c82828 ;">TempTranforma</h1>
+            </div>
+            <div class="col-12"><p style="font-size: 27px; color: gold;">Enter Temperature in Celcius or Fahrenheit</p></div>
         </div>
-        <div id="item3">
-            <label for="name">Fahrenheit</label><br>
-            <input class="form-control" type="number" id="fah" value="32">
-        </div></div>
-        <div id="item4">
-            <p style="font-size: 27px; color: gold;">Enter Temperature in Celcius or Fahrenheit</p>
-        </div>
-   
-
+        <!-- input-section -->
+        <div class="row text-center mt-5">
+            <div  class="col-12" id="item2">
+                    <label for="name1">Celcius</label><br>
+                    <input class="form-control text-center" type="number" id="cel" value="0">
+                </div><br>
+                <div  class="col-12" id="item3">
+                    <label for="name">Fahrenheit</label><br>
+                    <input class="form-control text-center" type="number" id="fah" value="32">
+                </div>
+                <div class="col-12 mt-4">
+                    <img src="Design-PNG-Free-Image.png" class="img-fluid" alt="">
+                </div>
+            </div>
+        
+        
+            
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
     <script>
         var cel = document.getElementById("cel");
         var fah = document.getElementById("fah");
@@ -153,5 +57,5 @@
             cel.value = cy;
         });
     </script>
-</body>
+  </body>
 </html>
